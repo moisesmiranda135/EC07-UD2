@@ -3,6 +3,8 @@ package com.salesianos.triana.dam.Ejercicio07.models;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -23,5 +25,10 @@ public class Playlist {
     @Column(name = "description")
     @Lob
     private String descripcion;
+
+    @Builder.Default
+    @OneToMany(mappedBy = "playList")
+    private List<Song> listSongs = new ArrayList<>();
+
 
 }

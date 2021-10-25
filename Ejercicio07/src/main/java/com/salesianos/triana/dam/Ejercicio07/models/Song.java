@@ -14,9 +14,9 @@ import java.io.Serializable;
 @Builder
 public class Song implements Serializable {
 
-    @Id
-    @GeneratedValue
-    private Long id;
+    @Builder.Default
+    @EmbeddedId
+    private AddedTo id = new AddedTo();
 
     @Column(name = "tittle")
     private String titulo;
@@ -29,6 +29,11 @@ public class Song implements Serializable {
 
     private String year;
 
+    @ManyToOne
+    @MapsId("playlistId")
+    @JoinColumn(name="playlistId")
+    private Playlist playList;
+
 
     //HELPERS PARA ARTIST
 
@@ -40,5 +45,19 @@ public class Song implements Serializable {
     public void removeArtist(Artist a) {
         a.getListSongs().remove(this);
         this.artist = null;
+    }
+
+
+
+    //HELPERS PARA PLAYLIST
+
+    public void addToPlayList(Playlist p) {
+        playList = p;
+        p.getListSongs().add(this);
+    }
+
+    public void removeFromAsignatura(Playlist p) {
+        p.getListSongs().remove(this);
+        playList = null;
     }
 }

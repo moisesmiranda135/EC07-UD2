@@ -1,0 +1,137 @@
+2021-10-25 12:16:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "
+    CREATE TABLE SONG (
+       DATETIME VARCHAR(255) NOT NULL,
+        ORDER[*] VARCHAR(255) NOT NULL,
+        PLAYLIST_ID BIGINT NOT NULL,
+        SONG_ID BIGINT NOT NULL,
+        ALBUM VARCHAR(255),
+        TITTLE VARCHAR(255),
+        YEAR VARCHAR(255),
+        ARTIST_ID BIGINT,
+        PRIMARY KEY (DATETIME, ORDER, PLAYLIST_ID, SONG_ID)
+    )"; se esperaba "identifier"
+Syntax error in SQL statement "
+    CREATE TABLE SONG (
+       DATETIME VARCHAR(255) NOT NULL,
+        ORDER[*] VARCHAR(255) NOT NULL,
+        PLAYLIST_ID BIGINT NOT NULL,
+        SONG_ID BIGINT NOT NULL,
+        ALBUM VARCHAR(255),
+        TITTLE VARCHAR(255),
+        YEAR VARCHAR(255),
+        ARTIST_ID BIGINT,
+        PRIMARY KEY (DATETIME, ORDER, PLAYLIST_ID, SONG_ID)
+    )"; expected "identifier"; SQL statement:
+
+    create table song (
+       datetime varchar(255) not null,
+        order varchar(255) not null,
+        playlist_id bigint not null,
+        song_id bigint not null,
+        album varchar(255),
+        tittle varchar(255),
+        year varchar(255),
+        artist_id bigint,
+        primary key (datetime, order, playlist_id, song_id)
+    ) [42001-200]
+2021-10-25 12:16:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+
+    alter table song 
+       add constraint FK_SONG_ARTIST 
+       foreign key (artist_id) 
+       references artist [42102-200]
+2021-10-25 12:16:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+
+    alter table song 
+       add constraint FKi9vdf6wc669cliyn1b4na9vtn 
+       foreign key (playlist_id) 
+       references playlist [42102-200]
+2021-10-25 12:41:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE SONG (DATETIME VARCHAR(255) NOT NULL, ORDER[*] VARCHAR(255) NOT NULL, PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITTLE VARCHAR(255), YEAR VARCHAR(255), ARTIST_ID BIGINT, PRIMARY KEY (DATETIME, ORDER, PLAYLIST_ID, SONG_ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE SONG (DATETIME VARCHAR(255) NOT NULL, ORDER[*] VARCHAR(255) NOT NULL, PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITTLE VARCHAR(255), YEAR VARCHAR(255), ARTIST_ID BIGINT, PRIMARY KEY (DATETIME, ORDER, PLAYLIST_ID, SONG_ID))"; expected "identifier"; SQL statement:
+create table song (datetime varchar(255) not null, order varchar(255) not null, playlist_id bigint not null, song_id bigint not null, album varchar(255), tittle varchar(255), year varchar(255), artist_id bigint, primary key (datetime, order, playlist_id, song_id)) [42001-200]
+2021-10-25 12:41:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song add constraint FK_SONG_ARTIST foreign key (artist_id) references artist [42102-200]
+2021-10-25 12:41:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song add constraint FKi9vdf6wc669cliyn1b4na9vtn foreign key (playlist_id) references playlist [42102-200]
+2021-10-25 13:35:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE SONG (DATETIME VARCHAR(255) NOT NULL, ORDER[*] VARCHAR(255) NOT NULL, PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITTLE VARCHAR(255), YEAR VARCHAR(255), ARTIST_ID BIGINT, PRIMARY KEY (DATETIME, ORDER, PLAYLIST_ID, SONG_ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE SONG (DATETIME VARCHAR(255) NOT NULL, ORDER[*] VARCHAR(255) NOT NULL, PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITTLE VARCHAR(255), YEAR VARCHAR(255), ARTIST_ID BIGINT, PRIMARY KEY (DATETIME, ORDER, PLAYLIST_ID, SONG_ID))"; expected "identifier"; SQL statement:
+create table song (datetime varchar(255) not null, order varchar(255) not null, playlist_id bigint not null, song_id bigint not null, album varchar(255), tittle varchar(255), year varchar(255), artist_id bigint, primary key (datetime, order, playlist_id, song_id)) [42001-200]
+2021-10-25 13:35:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song add constraint FK_SONG_ARTIST foreign key (artist_id) references artist [42102-200]
+2021-10-25 13:35:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song add constraint FKi9vdf6wc669cliyn1b4na9vtn foreign key (playlist_id) references playlist [42102-200]
+2021-10-25 13:37:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE SONG (DATETIME VARCHAR(255) NOT NULL, ORDER[*] VARCHAR(255) NOT NULL, PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITTLE VARCHAR(255), YEAR VARCHAR(255), ARTIST_ID BIGINT, PRIMARY KEY (DATETIME, ORDER, PLAYLIST_ID, SONG_ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE SONG (DATETIME VARCHAR(255) NOT NULL, ORDER[*] VARCHAR(255) NOT NULL, PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITTLE VARCHAR(255), YEAR VARCHAR(255), ARTIST_ID BIGINT, PRIMARY KEY (DATETIME, ORDER, PLAYLIST_ID, SONG_ID))"; expected "identifier"; SQL statement:
+create table song (datetime varchar(255) not null, order varchar(255) not null, playlist_id bigint not null, song_id bigint not null, album varchar(255), tittle varchar(255), year varchar(255), artist_id bigint, primary key (datetime, order, playlist_id, song_id)) [42001-200]
+2021-10-25 13:37:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song add constraint FK_SONG_ARTIST foreign key (artist_id) references artist [42102-200]
+2021-10-25 13:37:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song add constraint FKi9vdf6wc669cliyn1b4na9vtn foreign key (playlist_id) references playlist [42102-200]
+2021-10-25 13:57:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE SONG (DATETIME VARCHAR(255) NOT NULL, ORDER[*] VARCHAR(255) NOT NULL, PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITTLE VARCHAR(255), YEAR VARCHAR(255), ARTIST_ID BIGINT, PRIMARY KEY (DATETIME, ORDER, PLAYLIST_ID, SONG_ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE SONG (DATETIME VARCHAR(255) NOT NULL, ORDER[*] VARCHAR(255) NOT NULL, PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITTLE VARCHAR(255), YEAR VARCHAR(255), ARTIST_ID BIGINT, PRIMARY KEY (DATETIME, ORDER, PLAYLIST_ID, SONG_ID))"; expected "identifier"; SQL statement:
+create table song (datetime varchar(255) not null, order varchar(255) not null, playlist_id bigint not null, song_id bigint not null, album varchar(255), tittle varchar(255), year varchar(255), artist_id bigint, primary key (datetime, order, playlist_id, song_id)) [42001-200]
+2021-10-25 13:57:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song add constraint FK_SONG_ARTIST foreign key (artist_id) references artist [42102-200]
+2021-10-25 13:57:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song add constraint FKi9vdf6wc669cliyn1b4na9vtn foreign key (playlist_id) references playlist [42102-200]
+2021-10-25 13:57:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT SONG0_.DATETIME AS DATETIME1_2_0_, SONG0_.ORDER[*] AS ORDER2_2_0_, SONG0_.PLAYLIST_ID AS PLAYLIST3_2_0_, SONG0_.SONG_ID AS SONG_ID4_2_0_, SONG0_.ALBUM AS ALBUM5_2_0_, SONG0_.ARTIST_ID AS ARTIST_I8_2_0_, SONG0_.TITTLE AS TITTLE6_2_0_, SONG0_.YEAR AS YEAR7_2_0_ FROM SONG SONG0_ WHERE SONG0_.DATETIME=? AND SONG0_.ORDER=? AND SONG0_.PLAYLIST_ID=? AND SONG0_.SONG_ID=?"; se esperaba "identifier"
+Syntax error in SQL statement "SELECT SONG0_.DATETIME AS DATETIME1_2_0_, SONG0_.ORDER[*] AS ORDER2_2_0_, SONG0_.PLAYLIST_ID AS PLAYLIST3_2_0_, SONG0_.SONG_ID AS SONG_ID4_2_0_, SONG0_.ALBUM AS ALBUM5_2_0_, SONG0_.ARTIST_ID AS ARTIST_I8_2_0_, SONG0_.TITTLE AS TITTLE6_2_0_, SONG0_.YEAR AS YEAR7_2_0_ FROM SONG SONG0_ WHERE SONG0_.DATETIME=? AND SONG0_.ORDER=? AND SONG0_.PLAYLIST_ID=? AND SONG0_.SONG_ID=?"; expected "identifier"; SQL statement:
+select song0_.datetime as datetime1_2_0_, song0_.order as order2_2_0_, song0_.playlist_id as playlist3_2_0_, song0_.song_id as song_id4_2_0_, song0_.album as album5_2_0_, song0_.artist_id as artist_i8_2_0_, song0_.tittle as tittle6_2_0_, song0_.year as year7_2_0_ from song song0_ where song0_.datetime=? and song0_.order=? and song0_.playlist_id=? and song0_.song_id=? [42001-200]
+2021-10-25 14:07:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE SONG (DATETIME VARCHAR(255) NOT NULL, ORDER[*] VARCHAR(255) NOT NULL, PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITTLE VARCHAR(255), YEAR VARCHAR(255), ARTIST_ID BIGINT, PRIMARY KEY (DATETIME, ORDER, PLAYLIST_ID, SONG_ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE SONG (DATETIME VARCHAR(255) NOT NULL, ORDER[*] VARCHAR(255) NOT NULL, PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITTLE VARCHAR(255), YEAR VARCHAR(255), ARTIST_ID BIGINT, PRIMARY KEY (DATETIME, ORDER, PLAYLIST_ID, SONG_ID))"; expected "identifier"; SQL statement:
+create table song (datetime varchar(255) not null, order varchar(255) not null, playlist_id bigint not null, song_id bigint not null, album varchar(255), tittle varchar(255), year varchar(255), artist_id bigint, primary key (datetime, order, playlist_id, song_id)) [42001-200]
+2021-10-25 14:07:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song add constraint FK_SONG_ARTIST foreign key (artist_id) references artist [42102-200]
+2021-10-25 14:07:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song add constraint FKi9vdf6wc669cliyn1b4na9vtn foreign key (playlist_id) references playlist [42102-200]
+2021-10-25 14:07:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT SONG0_.DATETIME AS DATETIME1_2_0_, SONG0_.ORDER[*] AS ORDER2_2_0_, SONG0_.PLAYLIST_ID AS PLAYLIST3_2_0_, SONG0_.SONG_ID AS SONG_ID4_2_0_, SONG0_.ALBUM AS ALBUM5_2_0_, SONG0_.ARTIST_ID AS ARTIST_I8_2_0_, SONG0_.TITTLE AS TITTLE6_2_0_, SONG0_.YEAR AS YEAR7_2_0_ FROM SONG SONG0_ WHERE SONG0_.DATETIME=? AND SONG0_.ORDER=? AND SONG0_.PLAYLIST_ID=? AND SONG0_.SONG_ID=?"; se esperaba "identifier"
+Syntax error in SQL statement "SELECT SONG0_.DATETIME AS DATETIME1_2_0_, SONG0_.ORDER[*] AS ORDER2_2_0_, SONG0_.PLAYLIST_ID AS PLAYLIST3_2_0_, SONG0_.SONG_ID AS SONG_ID4_2_0_, SONG0_.ALBUM AS ALBUM5_2_0_, SONG0_.ARTIST_ID AS ARTIST_I8_2_0_, SONG0_.TITTLE AS TITTLE6_2_0_, SONG0_.YEAR AS YEAR7_2_0_ FROM SONG SONG0_ WHERE SONG0_.DATETIME=? AND SONG0_.ORDER=? AND SONG0_.PLAYLIST_ID=? AND SONG0_.SONG_ID=?"; expected "identifier"; SQL statement:
+select song0_.datetime as datetime1_2_0_, song0_.order as order2_2_0_, song0_.playlist_id as playlist3_2_0_, song0_.song_id as song_id4_2_0_, song0_.album as album5_2_0_, song0_.artist_id as artist_i8_2_0_, song0_.tittle as tittle6_2_0_, song0_.year as year7_2_0_ from song song0_ where song0_.datetime=? and song0_.order=? and song0_.playlist_id=? and song0_.song_id=? [42001-200]
+2021-10-25 14:14:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE SONG (DATETIME VARCHAR(255) NOT NULL, ORDER[*] VARCHAR(255) NOT NULL, PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITTLE VARCHAR(255), YEAR VARCHAR(255), ARTIST_ID BIGINT, PRIMARY KEY (DATETIME, ORDER, PLAYLIST_ID, SONG_ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE SONG (DATETIME VARCHAR(255) NOT NULL, ORDER[*] VARCHAR(255) NOT NULL, PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITTLE VARCHAR(255), YEAR VARCHAR(255), ARTIST_ID BIGINT, PRIMARY KEY (DATETIME, ORDER, PLAYLIST_ID, SONG_ID))"; expected "identifier"; SQL statement:
+create table song (datetime varchar(255) not null, order varchar(255) not null, playlist_id bigint not null, song_id bigint not null, album varchar(255), tittle varchar(255), year varchar(255), artist_id bigint, primary key (datetime, order, playlist_id, song_id)) [42001-200]
+2021-10-25 14:14:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song add constraint FK_SONG_ARTIST foreign key (artist_id) references artist [42102-200]
+2021-10-25 14:14:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song add constraint FKi9vdf6wc669cliyn1b4na9vtn foreign key (playlist_id) references playlist [42102-200]
+2021-10-25 14:14:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT SONG0_.DATETIME AS DATETIME1_2_0_, SONG0_.ORDER[*] AS ORDER2_2_0_, SONG0_.PLAYLIST_ID AS PLAYLIST3_2_0_, SONG0_.SONG_ID AS SONG_ID4_2_0_, SONG0_.ALBUM AS ALBUM5_2_0_, SONG0_.ARTIST_ID AS ARTIST_I8_2_0_, SONG0_.TITTLE AS TITTLE6_2_0_, SONG0_.YEAR AS YEAR7_2_0_ FROM SONG SONG0_ WHERE SONG0_.DATETIME=? AND SONG0_.ORDER=? AND SONG0_.PLAYLIST_ID=? AND SONG0_.SONG_ID=?"; se esperaba "identifier"
+Syntax error in SQL statement "SELECT SONG0_.DATETIME AS DATETIME1_2_0_, SONG0_.ORDER[*] AS ORDER2_2_0_, SONG0_.PLAYLIST_ID AS PLAYLIST3_2_0_, SONG0_.SONG_ID AS SONG_ID4_2_0_, SONG0_.ALBUM AS ALBUM5_2_0_, SONG0_.ARTIST_ID AS ARTIST_I8_2_0_, SONG0_.TITTLE AS TITTLE6_2_0_, SONG0_.YEAR AS YEAR7_2_0_ FROM SONG SONG0_ WHERE SONG0_.DATETIME=? AND SONG0_.ORDER=? AND SONG0_.PLAYLIST_ID=? AND SONG0_.SONG_ID=?"; expected "identifier"; SQL statement:
+select song0_.datetime as datetime1_2_0_, song0_.order as order2_2_0_, song0_.playlist_id as playlist3_2_0_, song0_.song_id as song_id4_2_0_, song0_.album as album5_2_0_, song0_.artist_id as artist_i8_2_0_, song0_.tittle as tittle6_2_0_, song0_.year as year7_2_0_ from song song0_ where song0_.datetime=? and song0_.order=? and song0_.playlist_id=? and song0_.song_id=? [42001-200]

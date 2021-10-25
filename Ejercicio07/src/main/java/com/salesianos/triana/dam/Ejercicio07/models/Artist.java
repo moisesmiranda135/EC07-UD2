@@ -1,5 +1,6 @@
 package com.salesianos.triana.dam.Ejercicio07.models;
 
+
 import lombok.*;
 
 import javax.persistence.*;
@@ -22,7 +23,7 @@ public class Artist implements Serializable {
     @Column(name = "name")
     private String nombre;
 
-
+    @Builder.Default
     @OneToMany(mappedBy = "artist", fetch = FetchType.EAGER)
     private List<Song> listSongs = new ArrayList<>();
 
