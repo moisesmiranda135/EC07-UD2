@@ -28,5 +28,4 @@ public class Artist implements Serializable {
     private List<Song> listSongs = new ArrayList<>();
 
 
-
 }

@@ -6,18 +6,29 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 
-@Embeddable
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
+@Entity
+@NoArgsConstructor
+@Getter
+@Setter
+@AllArgsConstructor
+@Builder
 public class AddedTo implements Serializable {
 
-    private Long songId;
+    @Builder.Default
+    @EmbeddedId
+    private AddedToPk id = new AddedToPk();
 
-    private Long playlistId;
 
-    @Column(name = "datetime")
-    private String fecha;
+    @ManyToOne
+    @MapsId("song_id")
+    @JoinColumn(name="song_id")
+    private Song song;
 
-    @Column(name = "order")
-    private String orden;
+    @ManyToOne
+    @MapsId("playlist_id")
+    @JoinColumn(name="playlist_id")
+    private Playlist playlist;
+
+    private String datetime;
+    private String order;
 }

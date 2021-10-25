@@ -5,6 +5,8 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -14,9 +16,9 @@ import java.io.Serializable;
 @Builder
 public class Song implements Serializable {
 
-    @Builder.Default
-    @EmbeddedId
-    private AddedTo id = new AddedTo();
+    @Id
+    @GeneratedValue
+    private Long id;
 
     @Column(name = "tittle")
     private String titulo;
@@ -29,10 +31,9 @@ public class Song implements Serializable {
 
     private String year;
 
-    @ManyToOne
-    @MapsId("playlistId")
-    @JoinColumn(name="playlistId")
-    private Playlist playList;
+    @Builder.Default
+    @ManyToMany(mappedBy = "listSongs", fetch = FetchType.EAGER)
+    private List<Playlist> playlist = new ArrayList<>();
 
 
     //HELPERS PARA ARTIST
@@ -47,17 +48,4 @@ public class Song implements Serializable {
         this.artist = null;
     }
 
-
-
-    //HELPERS PARA PLAYLIST
-
-    public void addToPlayList(Playlist p) {
-        playList = p;
-        p.getListSongs().add(this);
-    }
-
-    public void removeFromAsignatura(Playlist p) {
-        p.getListSongs().remove(this);
-        playList = null;
-    }
 }
