@@ -31,9 +31,10 @@ public class Song implements Serializable {
 
     private String year;
 
+
     @Builder.Default
-    @ManyToMany(mappedBy = "listSongs", fetch = FetchType.EAGER)
-    private List<Playlist> playlist = new ArrayList<>();
+    @OneToMany(mappedBy = "song")
+    private List<AddedTo> addedTo = new ArrayList<>();
 
 
     //HELPERS PARA ARTIST

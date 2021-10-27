@@ -8,13 +8,14 @@ import javax.persistence.Entity;
 import java.io.Serializable;
 
 @Embeddable
-@NoArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class AddedToPk implements Serializable {
 
     private Long song_id;
+
     private Long playlist_id;
+
 }

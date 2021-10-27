@@ -1,5 +1,6 @@
 package com.salesianos.triana.dam.Ejercicio07;
 
+import com.salesianos.triana.dam.Ejercicio07.models.AddedTo;
 import com.salesianos.triana.dam.Ejercicio07.models.Artist;
 import com.salesianos.triana.dam.Ejercicio07.models.Playlist;
 import com.salesianos.triana.dam.Ejercicio07.models.Song;
@@ -11,6 +12,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.time.LocalDateTime;
+
 
 @Component
 @RequiredArgsConstructor
@@ -45,14 +48,26 @@ public class MainPrueba {
                 .build();
 
         playlistService.save(playlist);
-        playlist.addSong(song);
-
-        playlistService.edit(playlist);
 
 
-        System.out.println("El título de la Playlist creada se tiene de nombre: " + playlist.getNombre() +
-                ", tiene añadida la canción " + playlist.getListSongs().get(0).getTitulo() +
-                " y el artista de la canción se llama " + playlist.getListSongs().get(0).getArtist().getNombre());
+        AddedTo addedTo = AddedTo.builder()
+                        .song(song)
+                        .playlist(playlist)
+                        .datetime(LocalDateTime.now())
+                        .build();
+
+        addedToService.edit(addedTo);
+
+
+
+        System.out.println("El título de la Playlist creada se tiene de nombre: " + addedTo.getPlaylist().getNombre() +
+                ", tiene añadida la canción " + addedTo.getSong().getTitulo() +
+                " y el artista de la canción se llama " + addedTo.getSong().getArtist().getNombre());
+
+        System.out.println(addedTo.getDatetime());
 
     }
+
+
+
 }
